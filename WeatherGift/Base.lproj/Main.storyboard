@@ -60,7 +60,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qtL-Fo-nCS">
-                                <rect key="frame" x="0.0" y="245" width="375" height="378"/>
+                                <rect key="frame" x="0.0" y="314" width="375" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DayWeatherCell" rowHeight="80" id="zKH-oo-fHR" customClass="DayWeatherCell" customModule="WeatherGift" customModuleProvider="target">
@@ -113,20 +113,85 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="n1W-bB-96Y">
+                                <rect key="frame" x="0.0" y="245" width="375" height="70"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="6BF-Wi-yx7"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="hzJ-Ap-FtP">
+                                    <size key="itemSize" width="70" height="70"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HourlyCell" id="eNz-Ph-KmQ" customClass="HourlyWeatherCell" customModule="WeatherGift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOf-fg-Qcr">
+                                                    <rect key="frame" x="0.0" y="49" width="70" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="small-cloudy" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-dO-ats">
+                                                    <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="raindrop" translatesAutoresizingMaskIntoConstraints="NO" id="Fjn-RN-9gw">
+                                                    <rect key="frame" x="60" y="25" width="8" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfE-HH-bZz">
+                                                    <rect key="frame" x="45" y="32" width="25" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="10"/>
+                                                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79S-yI-yJj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="70" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="hourlyIcon" destination="eF8-dO-ats" id="kHR-cP-qOe"/>
+                                            <outlet property="hourlyPrecipProb" destination="gfE-HH-bZz" id="qcK-Ij-VU2"/>
+                                            <outlet property="hourlyTemp" destination="HOf-fg-Qcr" id="xOH-yZ-uwb"/>
+                                            <outlet property="hourlyTime" destination="79S-yI-yJj" id="Rhy-Yi-71g"/>
+                                            <outlet property="rainDropImage" destination="Fjn-RN-9gw" id="KV4-FN-NlU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gEa-kb-5aH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="33d-Pp-0Im"/>
                             <constraint firstItem="qtL-Fo-nCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3dZ-wJ-JI2"/>
                             <constraint firstItem="gEa-kb-5aH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jjt-Bd-lPr"/>
+                            <constraint firstItem="n1W-bB-96Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="chX-2b-do0"/>
                             <constraint firstItem="qtL-Fo-nCS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e7S-AC-Lef"/>
                             <constraint firstItem="gEa-kb-5aH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kmR-r9-0rh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qtL-Fo-nCS" secondAttribute="bottom" constant="44" id="lTb-pe-7Yb"/>
-                            <constraint firstItem="qtL-Fo-nCS" firstAttribute="top" secondItem="gEa-kb-5aH" secondAttribute="bottom" id="q7F-3Q-PGz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qtL-Fo-nCS" secondAttribute="bottom" constant="53" id="lTb-pe-7Yb"/>
+                            <constraint firstItem="qtL-Fo-nCS" firstAttribute="top" secondItem="gEa-kb-5aH" secondAttribute="bottom" constant="69" id="q7F-3Q-PGz"/>
+                            <constraint firstItem="n1W-bB-96Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qYE-25-xra"/>
+                            <constraint firstItem="n1W-bB-96Y" firstAttribute="top" secondItem="gEa-kb-5aH" secondAttribute="bottom" id="xB7-wP-Dz3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="n1W-bB-96Y" id="y4q-Bq-i7K"/>
                         <outlet property="currentImage" destination="dMR-d8-axn" id="7Cq-Mx-QDQ"/>
                         <outlet property="dateLabel" destination="4b9-es-sRv" id="uHy-fj-7ii"/>
                         <outlet property="locationLabel" destination="bxX-dY-I5q" id="m9w-R0-bE4"/>
@@ -219,5 +284,7 @@
     </scenes>
     <resources>
         <image name="clear-day" width="103" height="109"/>
+        <image name="raindrop" width="18" height="20"/>
+        <image name="small-cloudy" width="180" height="116"/>
     </resources>
 </document>
